@@ -1,0 +1,38 @@
+
+use std::io;
+#[derive(Debug)]
+struct Patient<T,U,A> {
+    NAME: T,
+    age: U,
+    Salary: A,
+}
+
+fn main () {
+    println!("Please Enter your NAME: ");
+    println!("Please Enter your age: ");
+    println!("Please Enter your Salary: ");
+
+    let mut a = String::new();
+    io::stdin().read_line(&mut a).expect("failed to read line");
+    // let a: i32 = a.trim().parse().unwrap();
+
+    let mut b = String::new();
+    io::stdin().read_line(&mut b).expect("failed to read line");
+    // let b: i32 = b.trim().parse().unwrap();
+    
+    let mut c = String::new();
+    io::stdin().read_line(&mut c).expect("failed to read line");
+    // let c: i32 = c.trim().parse().unwrap();
+       
+
+
+
+    let mut patient_1= Patient {
+        NAME: a,
+        age: b,
+        Salary:c,
+    };
+
+
+    println!("{:#?}",patient_1);
+}
